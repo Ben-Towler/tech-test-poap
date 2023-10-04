@@ -2,19 +2,34 @@ import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors: {
+      'white': "#FFFFFF",
+      'primary': {
+        light: "#B5AEFF",
+        DEFAULT: "#5E58A5",
+        dark: "#473E6B"
+      },
+      'error': {
+        light: "#FFD8D8",
+        DEFAULT: "#ff3333"
+      }
+    },
+    fontFamily: {
+      "heading": ["var(--font-rubik)", 'sans-serif'],
+      "body": ["var(--font-comfortaa)", 'sans-serif'],
+    },
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'hero': "url('/header-bg.webp')",
+        'card': "url('/card-bg.svg')",
+        'grad': "radial-gradient(rgba(255,255,255,0.7) 15%, rgba(255,255,255,0) 50%)",
       },
     },
   },
   plugins: [],
-}
+};
+
 export default config
