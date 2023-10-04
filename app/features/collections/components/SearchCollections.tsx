@@ -12,7 +12,7 @@ type Props = {
   isLoading?: boolean;
 }
 
-export const SearchCollectionsForm = ({ setSearchQuery, error, isLoading }: Props) => {
+export const SearchCollections = ({ setSearchQuery, error, isLoading }: Props) => {
   const [inputValue, setInputValue] = useState("");
 
   const onSubmit = () => setSearchQuery(inputValue);

@@ -1,2 +1,2 @@
 export { DisplayCollections } from "./DisplayCollections";
-export { SearchCollectionsForm } from "./SearchCollectionsForm";
+export { SearchCollections } from "./SearchCollections";

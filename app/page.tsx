@@ -3,7 +3,7 @@
 import { VStack, Text, H1 } from "./components";
 import { useState } from "react";
 import { useGetActionsScan } from "./features/collections/hooks/useGetActionsScan";
-import { DisplayCollections, SearchCollectionsForm } from "./features/collections/components";
+import { DisplayCollections, SearchCollections } from "./features/collections/components";
 import { NextPage } from "next";
 
 const IndexPage: NextPage = () => {
@@ -25,7 +25,7 @@ const IndexPage: NextPage = () => {
             </div>
           </VStack>
           <div className="mx-auto">
-            <SearchCollectionsForm
+            <SearchCollections
               setSearchQuery={setSearchQuery}
               isError={isError}
               error={error as any}
