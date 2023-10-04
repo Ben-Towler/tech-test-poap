@@ -1,10 +1,10 @@
 import { getValidChildren } from "@/app/lib/utils";
-import { forwardRef, useMemo } from "react";
+import { ReactNode, forwardRef, useMemo } from "react";
 import cx from "classnames";
 
 export type StackProps  = {
   direction: "row" | "column";
-  children: any;
+  children: ReactNode;
   spacing: 1 | 2 | 3 |  4 | 5 | 6 | 7 | 8;
   className?: string;
 };

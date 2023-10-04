@@ -8,7 +8,8 @@ import { Button, SearchField } from "@/app/components";
 type Props = {
   setSearchQuery: (query: string) => void;
   isError?: boolean;
-  error?: AxiosError<{ message: string }> | null;
+  // TODO: Define type for the error
+  error?: AxiosError<any> | null;
   isLoading?: boolean;
 }
 
@@ -32,7 +33,7 @@ export const SearchCollections = ({ setSearchQuery, error, isLoading }: Props) =
           onSubmit={onSubmit}
           aria-label="Search"
           placeholder="Search..."
-          errorMessage={error?.response?.data.message}
+          errorMessage={error?.response?.data?.message}
           autoFocus
         />
         <Button isDisabled={!inputValue || isLoading} isLoading={isLoading} onPress={onSubmit}>

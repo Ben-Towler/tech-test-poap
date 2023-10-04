@@ -28,7 +28,7 @@ const IndexPage: NextPage = () => {
             <SearchCollections
               setSearchQuery={setSearchQuery}
               isError={isError}
-              error={error as any}
+              error={error}
               isLoading={isFetching}
             />
           </div>
